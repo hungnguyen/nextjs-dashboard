@@ -128,6 +128,7 @@ export async function authenticate(prevState:string | undefined, formData: FormD
                 case "CredentialsSignin":
                     return "Invalid credentials.";
                 default:
+                    console.error("Authenticate Error:", error);
                     return "Something went wrong.";
             }
         }
